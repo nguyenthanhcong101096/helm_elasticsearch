@@ -5,11 +5,8 @@ metadata:
   namespace: {{ .Values.namespace }}
 data:
   elasticsearch.yml: |
+    network.host: localhost
     http.port: 9200
-    network.host: 0.0.0.0
-    transport.host: localhost
-    path.data: /usr/share/elasticsearch/data
-    path.logs: /usr/share/elasticsearch/logs
 ---
 apiVersion: apps/v1
 kind: DaemonSet

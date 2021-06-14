@@ -5,9 +5,9 @@ metadata:
   namespace: {{ .Values.namespace }}
 data:
   kibana.yml: |
-    server.host: 0.0.0.0
     server.port: 5601
-    elasticsearch.hosts: "localhost:9200"
+    server.host: localhost
+    elasticsearch.hosts: ["http://localhost:9200"]
 ---
 apiVersion: apps/v1
 kind: DaemonSet
