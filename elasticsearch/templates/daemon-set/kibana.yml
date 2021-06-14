@@ -6,6 +6,7 @@ metadata:
 data:
   kibana.yml: |
     server.host: 0.0.0.0
+    server.port: 5601
     elasticsearch.hosts: "localhost:9200"
 ---
 apiVersion: apps/v1
