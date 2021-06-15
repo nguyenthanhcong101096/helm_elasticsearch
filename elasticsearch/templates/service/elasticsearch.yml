@@ -2,13 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: elasticsearch-svc
-  namespace: {{ .Values.namespace }}
-  labels:
-    app: elasticsearch
 spec:
   selector:
     app: elasticsearch
-    release: elk
   type: ClusterIP
   ports:
     - name: port-defaults
